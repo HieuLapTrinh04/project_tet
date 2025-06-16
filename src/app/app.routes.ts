@@ -1,6 +1,5 @@
 import { SectionQuatetComponent } from './components/section-quatet/section-quatet.component';
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { SetGiayTetComponent } from './components/set-giay-tet/set-giay-tet.component';
 import { SetQuaTetComponent } from './components/set-qua-tet/set-qua-tet.component';
 import { PagFashionComponent } from './components/pag-fashion/pag-fashion.component';
