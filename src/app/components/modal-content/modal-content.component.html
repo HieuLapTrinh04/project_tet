@@ -1,0 +1,80 @@
+<h2 mat-dialog-title style="padding: 20px 0 20px 150px; color: white; background-color: red; font-weight: 600;">Quản Lý Sản Phẩm</h2>
+<div mat-dialog-content>
+    <div class="container">
+        <h3 style="margin-left: 140px;">Thêm Sản Phẩm Mới</h3>
+        <div class="add">
+            <label for="name">Tên Sản Phẩm:</label>
+            <input
+              type="text"
+              id="name"
+              [(ngModel)]="newProduct.name"
+              placeholder="Nhập tên sản phẩm"
+            />
+      
+            <label for="description">Mô Tả:</label>
+            <input
+              type="text"
+              id="description"
+              [(ngModel)]="newProduct.description"
+              placeholder="Nhập mô tả"
+            />
+      
+            <label for="price">Giá:</label>
+            <input
+              type="number"
+              id="price"
+              [(ngModel)]="newProduct.price"
+              placeholder="Nhập giá"
+            />
+      
+            <label for="stock">Số Lượng Kho:</label>
+            <input
+              type="number"
+              id="stock"
+              [(ngModel)]="newProduct.stock"
+              placeholder="Nhập số lượng kho"
+            />
+
+            <label for="image">Hình Ảnh:</label>
+            <input
+              type="text"
+              id="image"
+              [(ngModel)]="newProduct.image"
+              placeholder="Chọn hình ảnh "
+            />
+        </div>
+        <br>
+  
+        <button (click)="postProduct()">Tạo Sản Phẩm</button>
+  
+        <hr />
+  
+        <h3 style="margin-left: 170px;">Xóa Sản Phẩm</h3>
+        <div class="delete">
+            <label for="productIdToDelete">ID Sản Phẩm:</label>
+            <input
+              type="number"
+              id="productIdToDelete"
+              [(ngModel)]="productIdToDelete"
+              placeholder="Nhập ID sản phẩm"
+            />
+        </div><br>
+        
+  
+        <button (click)="deleteProduct()" >Xóa Sản Phẩm</button>
+<!--   
+        <hr />
+  
+        <h3>Danh Sách Sản Phẩm</h3>
+        <ul>
+          <li *ngFor="let product of products">
+            <strong>{{ product.name }}</strong
+            ><br />
+            Mô Tả: {{ product.description }}<br />
+            Giá: {{ product.price }}<br />
+            Số Lượng Kho: {{ product.stock }}
+          </li>
+        </ul> -->
+      </div>
+</div>
+

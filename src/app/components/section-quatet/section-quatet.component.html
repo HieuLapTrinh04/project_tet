@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section
+      class="py-5"
+      style="background-image: url('assets/images/converted-1-scaled.webp')"
+    >
+      <div class="container">
+        <img src="assets/images/title.png" alt="title" class="img-title" />
+        <h2 class="head2">Lời Nhắn Gửi Mọi Người</h2>
+        <p class="note">
+          "Chào mọi người, Ngày đầu năm mới, chúc tất cả sức khỏe, bình an và
+          hạnh phúc! Tết là dịp để sẻ chia yêu thương, hãy sắm sửa những món đồ
+          Tết và chuẩn bị quà tặng ý nghĩa để biếu ông bà, cha mẹ, bạn bè, và
+          đồng nghiệp. Một giỏ quà hay món quà nhỏ gói trọn tình cảm sẽ làm ấm
+          lòng người nhận, mang đến khởi đầu trọn vẹn cho năm mới. Chúc cả nhà
+          một năm An Khang – Thịnh Vượng! 🎉✨"
+        </p>
+        <img
+          src="assets/images/giadinh.jpg"
+          alt="gia dinh"
+          class="img-family"
+        />
+      </div>
+      <div class="container">
+        <img
+          src="assets/images/title.png"
+          alt="title"
+          class="img-title gift-holiday"
+        />
+        <h2 class="text-center head2 gift">Các Trang Phục Ngày Tết</h2>
+        <div class="row">
+          <div class="col-md-4" *ngFor="let item of products">
+            <div class="card fashion-holiday">
+              <img
+                src="{{ item.image }}"
+                class="card-img-top"
+                alt="{{ item.title }}"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text" style="color: red; font-weight: 500;">{{ item.price }}</p>
+                <button class="btn btn-danger add-cart">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="view-all-btn" routerLink="/pageFashion">Xem tất cả sản phẩm</button>
+      </div>
+      <div class="container btn-user">
+        <button class="btn-0"><i class="fa-solid fa-users btn-1"></i>5000+ khách hàng</button>
+        <button class="btn-0"><i class="fa-solid fa-comments-dollar btn-2"></i>Chiết khấu cực hấp dẫn đến 30%</button>
+        <button class="btn-0"><i class="fa-solid fa-truck-fast btn-3" ></i>Miễn phí vận chuyển toàn quốc</button>
+        <button class="btn-0"><i class="fas fa-user-tag btn-4"></i>
+          Cam kết giao hàng đúng hẹn</button
+        ><button class="btn-0"><i class="fa-solid fa-box btn-5"></i>Sản phẩm cao cấp, chất lượng hàng đầu</button>
+        <button class="btn-0"> <i class="fas fa-users btn-6"></i>
+          Hỗ trợ thiết kế set quà và quần áo</button>
+        <button class="btn-0"><i class="fa-solid fa-boxes-stacked btn-8"></i>Năng lực đáp ứng đơn hàng lớn</button>
+        <button class="btn-0"><i class="fa-solid fa-comments-dollar btn-9"></i>Chiết khấu thêm cho đơn hàng đặt trước</button>
+      </div>
+    </section>
+  </body>
+</html>

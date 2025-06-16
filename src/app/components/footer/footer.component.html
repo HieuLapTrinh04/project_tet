@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Thông tin công ty -->
+      <div class="footer-section">
+        <h4 class="footer-title">{{companyInfo.name}}</h4>
+        <p>Địa chỉ: {{companyInfo.address}}</p>
+        <p>Hotline: <a href="tel:02866860863">{{companyInfo.hotline}}</a></p>
+        <p>Email: <a href="mailto:kinhdoanh@web.vn">{{companyInfo.email}}</a></p>
+        <div class="payment-icons">
+          <img src="{{companyInfo.paymentIcons[0]}}" alt="Visa" />
+          <img src="{{companyInfo.paymentIcons[1]}}" alt="MasterCard" />
+          <img src="{{companyInfo.paymentIcons[2]}}" alt="AMEX" />
+          <img src="{{companyInfo.paymentIcons[3]}}" alt="Discover" />
+        </div>
+      </div>
+  
+      <!-- Danh mục sản phẩm -->
+      <div class="footer-section">
+        <h4 class="footer-title">DANH MỤC SẢN PHẨM</h4>
+        <ul>
+          <li><a routerLink="QuanAo">Quần Áo Tết</a></li>
+          <li><a routerLink="Giay">Giày Tết</a></li>
+          <li><a routerLink="SetQua">Set Quà Tết</a></li>
+        </ul>
+      </div>
+  
+      <!-- Menu web -->
+      <div class="footer-section">
+        <h4 class="footer-title">MENU WEB</h4>
+        <ul>
+          <li><a href="/">Trang chủ</a></li>
+          <li><a href="/cart">Giỏ hàng</a></li>
+          <li><a href="/checkout">Thanh toán</a></li>
+          <li><a href="/contact">Liên hệ</a></li>
+        </ul>
+      </div>
+  
+      <!-- Hỗ trợ khách hàng -->
+      <div class="footer-section">
+        <h4 class="footer-title">HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul>
+          <li><a href="/support">Hỗ trợ khách hàng</a></li>
+          <li><a href="/terms">Điều khoản & dịch vụ</a></li>
+          <li><span class="disabled">Hướng dẫn thanh toán</span></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+  

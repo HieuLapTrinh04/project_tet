@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-danger">
+      <div class="container">
+        <img
+          src="https://img.pikbest.com/origin/10/06/77/24UpIkbEsTeSX.png!w700wp"
+          class="img-mai"
+          alt="Nhanh Mai"
+        />
+        <a class="navbar-brand pacifico-regular" href="#">Quà Xuân</a>
+        <img
+          src="https://mir-s3-cdn-cf.behance.net/projects/404/14963915.5488e414bc788.png"
+          class="img-mai2"
+          alt="Nhanh Mai"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <div class="TrangChu">
+                <i class="fa-solid fa-house"></i>
+              <a class="nav-link" routerLink="/home">Trang Chủ</a>
+              </div>
+            </li>
+<!-- 
+            <li class="nav-item">
+              <a class="nav-link" routerLink="QuanAo">Quần Áo</a>
+            </li>
+             -->
+             <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Thời Trang
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" routerLink="/pageFashion" routerLinkActive="active">Quần Áo</a></li>
+                <li><a class="dropdown-item" routerLink="/pageGiay" routerLinkActive="active">Giày Dép</a></li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/pageQuaTet">Quà Tết</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/pageTinTuc">Tin Tức</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/pageLienHe">Liên Hệ</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link "
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              <i class="fa-solid fa-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" routerLink="/login" routerLinkActive="active">Đăng Nhập</a></li>
+                <li><a class="dropdown-item" routerLink="/register" routerLinkActive="active">Đăng Ký</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link btn-cart" routerLink="/products">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

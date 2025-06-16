@@ -1,0 +1,68 @@
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+.img-mai{
+  width: 150px;
+  height: 70px;
+}
+.img-mai2{
+  margin-left: -20px;
+  width: 100px;
+  height: 70px;
+}
+  .pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: yellow;
+  }
+.nav-item {
+  margin-left: 15px;
+}
+.nav-link {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+.nav-link:hover {
+  color: yellow;
+}
+.btn-cart {
+  background-color:transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-cart:hover {
+  border: 1px solid yellow;
+}
+.TrangChu {
+  display: flex;
+  background-color:transparent;
+  color: white;
+}
+.TrangChu .fa-house {
+  margin-top: 15px;
+}
+.TrangChu:hover {
+  color: yellow;
+}
+.dropdown-menu {
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(to right, #ff99ac, #ff6a88, #ffb28b );
+} 
+.dropdown-item {
+  font-weight: 500;
+  font-size: 19px;
+  color: rgb(108, 71, 71);
+}
+.dropdown-item:hover {
+  color: rgb(73, 53, 53);
+  background: linear-gradient(to right, #de8393, #da556f, #de9773 );
+
+}

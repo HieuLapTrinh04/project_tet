@@ -1,0 +1,36 @@
+.add {
+    display: flex;
+    flex-direction: column;
+}
+.add label { 
+    font-weight: 500;
+}
+.add input { 
+    padding: 5px;
+    padding-left: 8px;
+    border-radius: 10px;
+}
+.container button { 
+    margin-left: 200px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+.delete {
+    display: flex;
+    flex-direction: column;
+}
+.delete label { 
+    font-weight: 500;
+}
+.delete input { 
+    padding: 5px;
+    padding-left: 8px;
+    border-radius: 10px;
+}
+
+.container {
+    padding: 20px;
+}

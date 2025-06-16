@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <app-header></app-header>
+    <div
+      style="
+        background-image: url('assets/images/converted-1-scaled.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="news-and-offers container">
+        <div class="special-offers">
+          <div class="info">
+            <img
+              src="assets/images/img-contact.png"
+              alt="Special Offers"
+              class="offer-image"
+            />
+            <h3 style="font-weight: bold;">CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI QUÀ XUÂN</h3>
+            <br />
+            <h5 class="info1">
+              <i class="fa-solid fa-location-dot"></i> Địa Chỉ:
+              <a href="" 
+                >720A Điện Biên Phủ, Vinhomes Tân Cảng, Bình Thạnh, Hồ Chí
+                Minh</a
+              >
+            </h5>
+            <h5 class="info1"><i class="fa-solid fa-phone"></i> Hotline: <a href="" class="info1">0902223209</a></h5>
+            <h5 class="info1">
+              <i class="fa-solid fa-envelope"></i> Mail:
+              <a href="" >quaxuannammoi{{ "@" }}gmail.com</a>
+            </h5>
+          </div>
+
+          <div class="offer-content">
+            <img src="assets/images/title.png" alt="title" class="img-title2" />
+            <h2 class="section-title">Hãy Liên Hệ Với Chúng Tôi Để Nhận Ưu Đãi Đặc Biệt</h2>
+            <p style="font-weight: 500">
+              Để lại thông tin để nhận ưu đãi độc đáo của chúng tôi ngay hôm
+              nay.
+            </p>
+            <form (submit)="onSubmit()">
+              <input
+                type="text"
+                placeholder="Họ và tên"
+                class="input-field"
+                [(ngModel)]="user.name"
+                name="name"
+              />
+              <input
+                type="text"
+                placeholder="Số điện thoại"
+                class="input-field"
+                [(ngModel)]="user.phone"
+                name="phone"
+              />
+              <button type="submit" class="submit-btn">Nhận ưu đãi</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </body>
+</html>

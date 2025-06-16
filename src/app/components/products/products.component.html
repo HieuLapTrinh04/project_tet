@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <app-header></app-header>
+    </div>
+        <div class="container">
+          <div>
+            <h1 class="head1">Giỏ Hàng</h1>
+          
+            <!-- Hiển thị danh sách sản phẩm -->
+            <div *ngIf="cartItems.length > 0; else emptyCart">
+              <table class="table1">
+                <thead>
+                  <tr>
+                    <th class="title">Hình Ảnh</th>
+                    <th class="title">Tên Sản Phẩm</th>
+                    <th class="title">Giá</th>
+                    <th class="title">Số Lượng</th>
+                    <th class="title">Hành Động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of cartItems">
+                    <td><img [src]="item.image" alt="{{ item.name }}" width="100"></td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.price | number:'1.0-0' }} VND</td>
+                    <td>
+                      <input
+                      
+                        type="number"
+                        [value]="item.quantity"
+                        (change)="updateQuantity(item.id, $event)"
+                      />
+                    </td>
+                    <td>
+                      <button (click)="removeProductFromCart(item.id)">Xóa</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>Tổng cộng: </strong>{{ totalPrice | number: '1.0-0' }} VND</p>
+  <button (click)="checkout()" 
+  [disabled]="cartItems.length === 0">
+              Thanh Toán
+            </button>
+            <ng-template #emptyCart>
+              <p>Giỏ hàng đang trống!</p>
+            </ng-template>
+          </div>
+        <p *ngIf="checkoutMessage">{{ checkoutMessage }}</p>
+          
+        </div>
+    <app-footer></app-footer>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-header></app-header>
+    <div
+      style="
+        background-image: url('assets/images/converted-1-scaled.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      "
+    >
+    <div class="container" class="container-register">
+        <h2>Đăng ký tài khoản</h2>
+        <h5>
+            Bạn chưa có tài khoản? Đăng ký <a routerLink="/login">tại đây</a>
+          </h5>
+        <form (submit)="register()" class="form-register">
+            <label for="username">Tên người dùng</label>
+            <input
+              type="text"
+              id="username"
+              [(ngModel)]="registerData.username"
+              name="name"
+              placeholder="Nhập tên người dùng"
+              required
+            />
+  
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              [(ngModel)]="registerData.email"
+              name="email"
+              placeholder="Nhập email"
+              required
+            />
+
+            <label for="password">Mật khẩu</label>
+            <input
+              type="password"
+              id="password"
+              [(ngModel)]="registerData.password"
+              placeholder="Nhập mật khẩu"
+              name="password"
+              required
+            />
+  
+          <button type="button" (click)="register()" class="submit">Đăng ký</button>
+        </form>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</body>
+</html>

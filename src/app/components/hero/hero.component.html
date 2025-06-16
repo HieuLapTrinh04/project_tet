@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let slide of slides" data-aos="fade-up"
+      data-bs-ride="carousel"
+      data-aos="fade-up"
+      data-bs-interval="4000">
+        <img [src]="slide.image" alt="{{ slide.title }}" />
+        <div class="slide-caption d-none d-md-block" data-aos="zoom-in">
+          <h5>{{ slide.title }}</h5>
+          <p>{{ slide.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</body>
+</html>

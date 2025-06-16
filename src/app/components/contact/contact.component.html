@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="background-image: url('assets/images/converted-1-scaled.webp'); background-repeat: no-repeat; background-size: cover;">
+      <div class="news-and-offers container">
+        <!-- Tin tức nổi bật -->
+        <div class="featured-news">
+        <img src="assets/images/title.png" alt="title" class="img-title" />
+          <h2 class="section-title">Tin Tức Nổi Bật</h2>
+          <div class="news-cards">
+            <div class="news-card" *ngFor="let news of newsItems">
+              <img [src]="news.image" alt="news image" class="news-image" />
+              <h3 class="news-title">{{ news.title }}</h3>
+              <p class="news-description">{{ news.description }}</p>
+              <button class="read-more-btn">Xem bài viết</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nhận ưu đãi đặc biệt -->
+        <div class="special-offers">
+          <img
+            src="assets/images/img-contact.png"
+            alt="Special Offers"
+            class="offer-image"
+          />
+          <div class="offer-content">
+        <img src="assets/images/title.png" alt="title" class="img-title2" />
+            <h2 class="section-title">Nhận Ưu Đãi Đặc Biệt</h2>
+            <p style="font-weight: 500;">
+              Để lại thông tin để nhận ưu đãi độc đáo của chúng tôi ngay hôm
+              nay.
+            </p>
+            <form (submit)="onSubmit()">
+              <input
+                type="text"
+                placeholder="Họ và tên"
+                class="input-field"
+                [(ngModel)]="user.name"
+                name="name"
+              />
+              <input
+                type="text"
+                placeholder="Số điện thoại"
+                class="input-field"
+                [(ngModel)]="user.phone"
+                name="phone"
+              />
+              <button type="submit" class="submit-btn">Nhận ưu đãi</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
