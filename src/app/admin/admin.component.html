@@ -1,0 +1,32 @@
+<div class="admin-container">
+  <!-- CHỈ HIỆN DASHBOARD KHI URL LÀ /admin -->
+  <div *ngIf="router.url === '/admin'">
+    <h1 class="title">ADMIN DASHBOARD</h1>
+
+    <div class="admin-cards">
+      <div class="card">
+        <i class="fa fa-cube"></i>
+        <h3>Sản phẩm</h3>
+        <p>Thêm, sửa, xóa sản phẩm</p>
+        <button routerLink="products">Quản lý</button>
+      </div>
+
+      <div class="card">
+        <i class="fa fa-users"></i>
+        <h3>Người dùng</h3>
+        <p>Phân quyền user / admin</p>
+        <button routerLink="users">Quản lý</button>
+      </div>
+
+      <div class="card">
+        <i class="fa fa-shopping-cart"></i>
+        <h3>Đơn hàng</h3>
+        <p>Theo dõi & xử lý đơn hàng</p>
+        <button routerLink="orders">Quản lý</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROUTE CON HIỆN Ở ĐÂY -->
+  <router-outlet></router-outlet>
+</div>

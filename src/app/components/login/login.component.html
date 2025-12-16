@@ -18,7 +18,7 @@
         align-items: center;
       "
     >
-      <div class="container" class="container-login">
+      <div class="container container-login">
         <h2>Đăng Nhập Tài Khoản</h2>
         <h5>
           Bạn chưa có tài khoản? Đăng ký <a routerLink="/register">tại đây</a>
@@ -43,9 +43,11 @@
             placeholder="Nhập mật khẩu"
             required
           />
-        <div class="error-message" *ngIf="loginError">{{ loginError }}</div>
+          <div class="error-message" *ngIf="loginError">{{ loginError }}</div>
 
-          <button type="submit" class="submit">Đăng nhập</button>
+          <button type="submit" class="submit" [disabled]="loginForm.invalid">
+            Đăng nhập
+          </button>
         </form>
       </div>
     </div>

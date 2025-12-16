@@ -1,0 +1,48 @@
+<div class="admin-container">
+  <h2>📦 QUẢN LÝ SẢN PHẨM</h2>
+
+  <!-- FORM -->
+  <div class="form-box">
+    <h3>{{ editing ? '✏️ Sửa sản phẩm' : '➕ Thêm sản phẩm' }}</h3>
+
+    <input placeholder="Tên sản phẩm" [(ngModel)]="form.name" />
+    <input type="number" placeholder="Giá" [(ngModel)]="form.price" />
+    <input type="number" placeholder="Số lượng" [(ngModel)]="form.stock" />
+    <input placeholder="Link hình ảnh" [(ngModel)]="form.image" />
+    <textarea placeholder="Mô tả" [(ngModel)]="form.description"></textarea>
+
+    <button class="btn primary" (click)="submit()">
+      {{ editing ? 'Cập nhật' : 'Thêm' }}
+    </button>
+
+    <button *ngIf="editing" class="btn cancel" (click)="reset()">
+      Hủy
+    </button>
+  </div>
+
+  <!-- TABLE -->
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td>{{ p.id }}</td>
+        <td class="product-name">{{ p.name }}</td>
+        <td class="price">{{ p.price | number }} đ</td>
+        <td class="actions">
+          <button class="btn edit" (click)="edit(p)">✏️ Sửa</button>
+          <button class="btn danger" (click)="deleteProduct(p.id)">
+            🗑 Xóa
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

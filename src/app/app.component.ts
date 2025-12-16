@@ -66,6 +66,7 @@ export class AppComponent implements OnInit {
   }
   
   
+  role = localStorage.getItem('role');
 
 
   // register() {

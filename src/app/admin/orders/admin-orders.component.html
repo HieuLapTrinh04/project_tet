@@ -1,0 +1,17 @@
+<h2>Quản lý đơn hàng</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>User</th>
+    <th>Tổng tiền</th>
+    <th>Trạng thái</th>
+  </tr>
+
+  <tr *ngFor="let o of orders">
+    <td>{{o.id}}</td>
+    <td>{{o.user_id}}</td>
+    <td>{{o.total}}</td>
+    <td>{{o.status}}</td>
+  </tr>
+</table>

@@ -32,10 +32,10 @@
                     <td>{{ item.price | number:'1.0-0' }} VND</td>
                     <td>
                       <input
-                      
                         type="number"
                         [value]="item.quantity"
                         (change)="updateQuantity(item.id, $event)"
+                        aria-label="Số lượng sản phẩm"
                       />
                     </td>
                     <td>

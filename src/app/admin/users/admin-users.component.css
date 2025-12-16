@@ -1,0 +1,96 @@
+.admin-container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.admin-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table thead {
+  background: #f4f6f8;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.admin-table th {
+  font-weight: 600;
+  color: #555;
+}
+
+.admin-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.admin-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* Role badge */
+.role {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role.admin {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.role.user {
+  background: #f1f8e9;
+  color: #558b2f;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn.admin {
+  background: #1976d2;
+  color: #fff;
+}
+
+.btn.admin:hover {
+  background: #1565c0;
+}
+
+.btn.user {
+  background: #9e9e9e;
+  color: #fff;
+}
+
+.btn.user:hover {
+  background: #757575;
+}

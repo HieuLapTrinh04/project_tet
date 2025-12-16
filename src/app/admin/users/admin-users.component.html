@@ -1,0 +1,20 @@
+<h2>Quản lý người dùng</h2>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Hành động</th>
+  </tr>
+
+  <tr *ngFor="let u of users">
+    <td>{{u.id}}</td>
+    <td>{{u.email}}</td>
+    <td>{{u.role}}</td>
+    <td>
+      <button (click)="setRole(u.id,'admin')">Admin</button>
+      <button (click)="setRole(u.id,'user')">User</button>
+    </td>
+  </tr>
+</table>

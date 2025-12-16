@@ -14,23 +14,35 @@ import { KhacBietComponent } from './components/tin-tuc/khac-biet/khac-biet.comp
 import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminProductsComponent } from './admin/products/admin-products.component';
+import { AdminUsersComponent } from './admin/users/admin-users.component';
+import { AdminOrdersComponent } from './admin/orders/admin-orders.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    {path: 'home', component:TrangChuComponent},
-    {path: 'QuanAo', component:SectionQuatetComponent},
-    {path: 'Giay', component:SetGiayTetComponent},
-    {path: 'SetQua', component:SetQuaTetComponent},
-    {path: 'pageFashion', component:PagFashionComponent},
-    {path: 'pageGiay', component:PageGiayComponent},
-    {path: 'pageQuaTet', component:PageQuaTetComponent},
-    {path: 'pageTinTuc', component:TinTucComponent},
-    {path: 'pageLienHe', component:LienHeComponent},
-    {path: 'pagePhongTuc', component:PhongTucComponent},
-    {path: 'pageLangBanh', component:LangBanhComponent},
-    {path: 'pageKhacBiet', component:KhacBietComponent},
-    {path: 'products', component:ProductsComponent},
-    {path: 'login', component:LoginComponent},
-    {path: 'register', component:RegisterComponent},
-
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: TrangChuComponent },
+  { path: 'QuanAo', component: SectionQuatetComponent },
+  { path: 'Giay', component: SetGiayTetComponent },
+  { path: 'SetQua', component: SetQuaTetComponent },
+  { path: 'pageFashion', component: PagFashionComponent },
+  { path: 'pageGiay', component: PageGiayComponent },
+  { path: 'pageQuaTet', component: PageQuaTetComponent },
+  { path: 'pageTinTuc', component: TinTucComponent },
+  { path: 'pageLienHe', component: LienHeComponent },
+  { path: 'pagePhongTuc', component: PhongTucComponent },
+  { path: 'pageLangBanh', component: LangBanhComponent },
+  { path: 'pageKhacBiet', component: KhacBietComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+{
+    path: 'admin',
+    component: AdminComponent,
+    children: [
+      { path: 'products', component: AdminProductsComponent },
+      { path: 'users', component: AdminUsersComponent },
+      { path: 'orders', component: AdminOrdersComponent }
+    ]
+  }
 ];
