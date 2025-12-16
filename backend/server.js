@@ -109,9 +109,16 @@ app.delete("/products/:id", (req, res) => {
 // API thanh toán
 app.post('/checkout', (req, res) => {
     let { cartId, totalPrice } = req.body;
-    // cartId = this.cartItems[0].id; 
-    console.error('Dữ liệu không hợp lệ:', req.body); // Log dữ liệu nhận được
-    if (!cartId || !Array.isArray(cartId) ||cartId.length === 0 || !totalPrice || totalPrice <= 0) {
+    
+    console.log('Dữ liệu nhận được:', req.body); // Log để debug
+    
+    // Chuyển cartId thành array nếu là số đơn
+    if (!Array.isArray(cartId)) {
+        cartId = [cartId];
+    }
+    
+    // Validate dữ liệu
+    if (!cartId || cartId.length === 0 || !totalPrice || totalPrice <= 0) {
         return res.status(400).json({ message: 'Dữ liệu không hợp lệ!' });
     }
 
@@ -123,7 +130,7 @@ app.post('/checkout', (req, res) => {
 
         // Lưu thông tin thanh toán vào bảng Orders
         const insertOrderQuery = 'INSERT INTO Orders (cart_id, total_price, created_at) VALUES (?, ?, NOW())';
-        db.query(insertOrderQuery, [cartId.join(','), totalPrice ], (err, result) => {
+        db.query(insertOrderQuery, [cartId.join(','), totalPrice], (err, result) => {
             if (err) {
                 console.error('Lỗi khi thêm đơn hàng:', err);
                 return db.rollback(() => {
@@ -132,7 +139,7 @@ app.post('/checkout', (req, res) => {
             }
 
             // Xóa giỏ hàng sau khi thanh toán
-            const deleteALLQuery = `DELETE FROM Cart WHERE id IN (${cartId.map(() => '?').join(',')}) `;
+            const deleteALLQuery = `DELETE FROM Cart WHERE id IN (${cartId.map(() => '?').join(',')})`;
             db.query(deleteALLQuery, cartId, (err, result) => {
                 if (err) {
                     console.error('Lỗi khi xóa giỏ hàng:', err);
